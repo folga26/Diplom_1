@@ -16,15 +16,15 @@ import static praktikum.IngredientType.SAUCE;
 public class BurgerTest {
 
     @Mock
-    Bun mockBun;
+    Bun mockBunPrice;
 
     @Test
     public void testGetPrice() {
 
         Burger burger = new Burger();
         Ingredient ingredient = new Ingredient(SAUCE, "sour cream", 200);
-        this.mockBun = new Bun("black bun", 100);
-        burger.setBuns(mockBun);
+        this.mockBunPrice = new Bun("black bun", 100);
+        burger.setBuns(mockBunPrice);
         burger.addIngredient(ingredient);
         assertEquals(400F, burger.getPrice(), 1);
     }
@@ -37,8 +37,8 @@ public class BurgerTest {
         Ingredient firstIngredient = new Ingredient(SAUCE, "sour cream", 200);
         Ingredient secondIngredient = new Ingredient(FILLING, "cutlet", 100);
         Ingredient thirdIngredient = new Ingredient(FILLING, "dinosaur", 200);
-        this.mockBun = new Bun("black bun", 100);
-        burger.setBuns(mockBun);
+        this.mockBunPrice = new Bun("black bun", 100);
+        burger.setBuns(mockBunPrice);
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);
         burger.addIngredient(thirdIngredient);

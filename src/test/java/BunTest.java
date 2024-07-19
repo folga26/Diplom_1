@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class BunTest {
 
     @Mock
-    Bun mockBun;
+    Bun mockBunPrice;
 
     @Test
     public void testGetBunName() {
@@ -23,9 +23,9 @@ public class BunTest {
     @Test
     public void testGetBunPrice(){
         Bun bun = new Bun("black bun", 100);
-        Mockito.when(mockBun.getPrice()).thenReturn(100F);
+        Mockito.when(mockBunPrice.getPrice()).thenReturn(100F);
         assertEquals(100F, bun.getPrice(), 1);
-        System.out.println(mockBun.getPrice());
+        System.out.println(mockBunPrice.getPrice());
     }
 
 }
